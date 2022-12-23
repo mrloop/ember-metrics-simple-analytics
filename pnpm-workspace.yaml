@@ -1,0 +1,3 @@
+packages:
+  - 'ember-metrics-simple-analytics'
+  - 'test-app'
