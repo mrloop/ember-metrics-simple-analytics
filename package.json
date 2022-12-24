@@ -5,6 +5,9 @@
   "repository": "",
   "license": "MIT",
   "author": "",
+  "keywords": [
+    "ember-addon"
+  ],
   "scripts": {
     "prepare": "pnpm build",
     "build": "pnpm --filter ember-metrics-simple-analytics build",
