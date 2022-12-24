@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - master
   pull_request: {}
 
 concurrency:
@@ -22,13 +21,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14.x
-          cache: npm
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 7.20
+          run_install: false
       - name: Install Dependencies
-        run: npm ci
+        run: pnpm i
       - name: Lint
-        run: npm run lint
+        run: pnpm run lint
       - name: Run Tests
-        run: npm run test
+        run: pnpm run test
 
   floating:
     name: "Floating Dependencies"
@@ -39,11 +42,15 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14.x
-          cache: npm
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 7.20
+          run_install: false
       - name: Install Dependencies
-        run: npm install --no-shrinkwrap
+        run: pnpm i
       - name: Run Tests
-        run: npm run test
+        run: pnpm run test
 
   try-scenarios:
     name: ${{ matrix.try-scenario }}
@@ -69,9 +76,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14.x
-          cache: npm
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 7.20
+          run_install: false
       - name: Install Dependencies
-        run: npm ci
+        run: echo "auto-install-peers=true" >> .npmrc && pnpm i
       - name: Run Tests
         run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
         working-directory: test-app
