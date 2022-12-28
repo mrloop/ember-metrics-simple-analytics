@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
-import SimpleAnalytics from 'ember-metrics-simple-analytics';
+import SimpleAnalytics, { SRC_URL } from 'ember-metrics-simple-analytics';
 
 module('Unit | Adapter | simple-analytics', function (hooks) {
   setupTest(hooks);
@@ -17,7 +17,7 @@ module('Unit | Adapter | simple-analytics', function (hooks) {
     return document.querySelector('[src*="simpleanalytics"]');
   }
 
-  module('install data-attributes', function () {
+  module('install', function () {
     test('script data attributes can be configured', function (assert) {
       this.adapter.config = {
         collectDnt: false,
@@ -42,6 +42,14 @@ module('Unit | Adapter | simple-analytics', function (hooks) {
       this.adapter.config = { autoCollect: true };
       this.adapter.install();
       assert.strictEqual(scriptElement().dataset.autoCollect, 'true');
+    });
+
+    test('script src can be configured', function (assert) {
+      const src = `${SRC_URL}?potatoes`;
+      this.adapter.config = { src };
+      this.adapter.install();
+      assert.strictEqual(scriptElement().src, src);
+      assert.strictEqual(scriptElement().dataset.src, undefined);
     });
   });
 
