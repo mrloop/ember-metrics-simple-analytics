@@ -54,6 +54,7 @@ module.exports = function (environment) {
         mode: 'hash',
         nonUniqueHostnames: 'checkout.stripe.com'
         pathOverwriter: 'myPathOverwriter',
+        src: 'my-custom-script.example.org/latest.js',
       }
     ]
   }

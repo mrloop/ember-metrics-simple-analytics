@@ -2,6 +2,8 @@ import { isPresent } from '@ember/utils';
 import { camelize } from '@ember/string';
 import BaseAdapter from 'ember-metrics/metrics-adapters/base';
 
+export const SRC_URL = 'https://scripts.simpleanalyticscdn.com/latest.js';
+
 export default class SimpleAnalytics extends BaseAdapter {
   toStringExtension() {
     return 'SimpleAnalytics';
@@ -14,8 +16,9 @@ export default class SimpleAnalytics extends BaseAdapter {
 
   _injectScript(config) {
     this._script = document.createElement('script');
-    this._script.src = 'https://scripts.simpleanalyticscdn.com/latest.js';
-    Object.entries(config).forEach(([key, value]) => {
+    const { src, ...dataAttributes } = config;
+    this._script.src = src || SRC_URL;
+    Object.entries(dataAttributes).forEach(([key, value]) => {
       if (isPresent(value)) this._script.dataset[camelize(key)] = String(value);
     });
     document.body.appendChild(this._script);
