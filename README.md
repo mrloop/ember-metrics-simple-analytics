@@ -11,6 +11,7 @@ Compatibility
 
 * Ember.js v3.28 or above
 * Embroider or ember-auto-import v2
+* ember-metrics v2
 
 
 Installation
