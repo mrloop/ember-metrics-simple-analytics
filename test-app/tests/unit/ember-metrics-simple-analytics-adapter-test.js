@@ -1,5 +1,6 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
+import { waitUntil } from '@ember/test-helpers';
 import SimpleAnalytics, { SRC_URL } from 'ember-metrics-simple-analytics';
 
 module('Unit | Adapter | simple-analytics', function (hooks) {
@@ -64,16 +65,18 @@ module('Unit | Adapter | simple-analytics', function (hooks) {
   });
 
   module('function calls', function () {
-    test('#trackEvent calls simpleanalytics with the correct arguments', function (assert) {
+    test('#trackEvent calls simpleanalytics with the correct arguments', async function (assert) {
       this.adapter.install();
+      await waitUntil(() => this.adapter.loaded);
       assert.expect(1);
       window.sa_event = (...args) =>
         assert.deepEqual(args, ['test', { plan: 'starter' }]);
       this.adapter.trackEvent({ name: 'test', plan: 'starter' });
     });
 
-    test('#trackPage calls simpleanalytics with the correct arguments', function (assert) {
+    test('#trackPage calls simpleanalytics with the correct arguments', async function (assert) {
       this.adapter.install();
+      await waitUntil(() => this.adapter.loaded);
       assert.expect(1);
       window.sa_pageview = (...args) =>
         assert.deepEqual(args, ['/test', { plan: 'starter' }]);
@@ -85,21 +88,56 @@ module('Unit | Adapter | simple-analytics', function (hooks) {
         this.adapter.config = { namespace: 'mrloop' };
       });
 
-      test('#trackEvent calls simpleanalytics with the correct arguments', function (assert) {
+      test('#trackEvent calls simpleanalytics with the correct arguments', async function (assert) {
         this.adapter.install();
+        await waitUntil(() => this.adapter.loaded);
         assert.expect(1);
         window.mrloop_event = (...args) =>
           assert.deepEqual(args, ['test', { plan: 'starter' }]);
         this.adapter.trackEvent({ name: 'test', plan: 'starter' });
       });
 
-      test('#trackPage calls simpleanalytics with the correct arguments', function (assert) {
+      test('#trackPage calls simpleanalytics with the correct arguments', async function (assert) {
         this.adapter.install();
+        await waitUntil(() => this.adapter.loaded);
         assert.expect(1);
         window.mrloop_pageview = (...args) =>
           assert.deepEqual(args, ['/test', { plan: 'starter' }]);
         this.adapter.trackPage({ path: '/test', plan: 'starter' });
       });
+    });
+  });
+
+  module('queue', function () {
+    test('it queues events until the script is loaded', async function (assert) {
+      this.adapter.install();
+      assert.expect(3);
+      window.sa_event = (...args) => assert.deepEqual(args, ['turnip', {}]);
+      assert.false(this.adapter.loaded, 'adapter is not loaded');
+      this.adapter.trackEvent({ name: 'turnip' });
+      assert.deepEqual(
+        this.adapter.queue,
+        [{ fncName: 'trackEvent', options: { name: 'turnip' } }],
+        'queue is populated'
+      );
+      await waitUntil(() => this.adapter.loaded);
+      assert.deepEqual(this.adapter.queue, [], 'queue is emptied');
+    });
+
+    test('it queues page views until the script is loaded', async function (assert) {
+      this.adapter.install();
+      assert.expect(3);
+      window.sa_event = (...args) => assert.deepEqual(args, ['/veg', {}]);
+      assert.false(this.adapter.loaded, 'adapter is not loaded');
+      this.adapter.trackPage({ path: '/veg' });
+      assert.deepEqual(
+        this.adapter.queue,
+        [{ fncName: 'trackPage', options: { path: '/veg' } }],
+        'queue is populated'
+      );
+      await waitUntil(() => this.adapter.loaded);
+
+      assert.deepEqual(this.adapter.queue, [], 'queue is emptied');
     });
   });
 });

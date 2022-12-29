@@ -1,10 +1,14 @@
 import { isPresent } from '@ember/utils';
 import { camelize } from '@ember/string';
 import BaseAdapter from 'ember-metrics/metrics-adapters/base';
+import { action } from '@ember/object';
 
 export const SRC_URL = 'https://scripts.simpleanalyticscdn.com/latest.js';
 
 export default class SimpleAnalytics extends BaseAdapter {
+  loaded = false;
+  queue = [];
+
   toStringExtension() {
     return 'SimpleAnalytics';
   }
@@ -22,6 +26,7 @@ export default class SimpleAnalytics extends BaseAdapter {
       if (isPresent(value)) this._script.dataset[camelize(key)] = String(value);
     });
     document.body.appendChild(this._script);
+    this._script.addEventListener('load', this.onScriptLoad);
   }
 
   identify() {
@@ -29,13 +34,31 @@ export default class SimpleAnalytics extends BaseAdapter {
   }
 
   trackEvent(options = {}) {
-    let { name, ...metadata } = options;
-    window[this._namespaceEvent](name, metadata);
+    console.log('trackEvent', options);
+    if (this.loaded) {
+      let { name, ...metadata } = options;
+      window[this._namespaceEvent](name, metadata);
+    } else {
+      this.queue.push({ fncName: 'trackEvent', options });
+    }
   }
 
   trackPage(options = {}) {
-    let { path, ...metadata } = options;
-    window[this._namespacePageview](path, metadata);
+    if (this.loaded) {
+      let { path, ...metadata } = options;
+      window[this._namespacePageview](path, metadata);
+    } else {
+      this.queue.push({ fncName: 'trackPage', options });
+    }
+  }
+
+  @action onScriptLoad() {
+    this._script.removeEventListener('load', this.onScriptLoad);
+    this.loaded = true;
+    while (this.queue.length) {
+      let { fncName, options } = this.queue.shift();
+      this[fncName](options);
+    }
   }
 
   uninstall() {
