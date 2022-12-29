@@ -66,12 +66,14 @@ module.exports = function (environment) {
 Usage
 ------------------------------------------------------------------------------
 
-This adapter by default sets Simple Analytics auto collect to false. You must explicitly call `trackPage` when you transition into a route, for example:
+This adapter by default sets Simple Analytics auto collect to false. You must explicitly call `trackPage` when you transition into a route and you need to register `SimpleAnalytics` as a `metrics-adapter`, for example:
 
 ```js
 // app/routes/application.js
 import Route from '@ember/routing/route';
+import { getOwner } from '@ember/application';
 import { service } from '@ember/service';
+import SimpleAnalytics from 'ember-metrics-simple-analytics';
 
 export default class ApplicationRoute extends Route {
   @service metrics;
@@ -79,6 +81,11 @@ export default class ApplicationRoute extends Route {
 
   constructor() {
     super(...arguments);
+
+    getOwner(this).register(
+      'metrics-adapter:simple-analytics',
+      SimpleAnalytics
+    );
 
     this.router.on('routeDidChange', () => {
       const page = this.router.currentURL;
