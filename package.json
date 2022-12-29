@@ -2,9 +2,6 @@
   "name": "ember-metrics-simple-analytics",
   "version": "0.0.0",
   "private": false,
-  "repository": "https://github.com/mrloop/ember-metrics-simple-analytics",
-  "license": "MIT",
-  "author": "Ewan McDougall <ewan@mrloop.com>",
   "keywords": [
     "ember-addon",
     "ember-metrics",
@@ -15,22 +12,52 @@
     "tracking",
     "gdpr"
   ],
-  "scripts": {
-    "prepare": "pnpm build",
-    "build": "pnpm --filter ember-metrics-simple-analytics build",
-    "start": "concurrently 'npm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
-    "start:tests": "pnpm --filter test-app start",
-    "start:addon": "pnpm --filter ember-metrics-simple-analytics start --no-watch.clearScreen",
-    "test": "pnpm --filter test-app test",
-    "lint": "pnpm --filter '*' lint",
-    "lint:fix": "pnpm --filter '*' lint:fix"
-  },
-  "devDependencies": {
-    "concurrently": "^7.2.1",
-    "prettier": "^2.5.1"
-  },
+  "repository": "https://github.com/mrloop/ember-metrics-simple-analytics",
+  "license": "MIT",
+  "author": "Ewan McDougall <ewan@mrloop.com>",
   "workspaces": [
     "ember-metrics-simple-analytics",
     "test-app"
-  ]
+  ],
+  "scripts": {
+    "build": "pnpm --filter ember-metrics-simple-analytics build",
+    "lint": "pnpm --filter '*' lint",
+    "lint:fix": "pnpm --filter '*' lint:fix",
+    "prepare": "pnpm build",
+    "start": "concurrently 'npm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
+    "start:addon": "pnpm --filter ember-metrics-simple-analytics start --no-watch.clearScreen",
+    "start:tests": "pnpm --filter test-app start",
+    "test": "pnpm --filter test-app test"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.1",
+    "prettier": "^2.5.1",
+    "release-it": "15.6.0",
+    "@release-it-plugins/lerna-changelog": "5.0.0",
+    "@release-it-plugins/workspaces": "3.2.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "release-it": {
+    "plugins": {
+      "@release-it-plugins/lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": true
+      },
+      "@release-it-plugins/workspaces": {
+        "publish": false
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    },
+    "npm": {
+      "publish": false
+    }
+  }
 }

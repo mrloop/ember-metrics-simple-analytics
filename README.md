@@ -2,6 +2,9 @@ ember-metrics-simple-analytics
 ==============================================================================
 
 [![CI](https://github.com/mrloop/ember-metrics-simple-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/mrloop/ember-metrics-simple-analytics/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/ember-metrics-simple-analytics.svg)](https://www.npmjs.com/package/ember-metrics-simple-analytics)
+
+
 
 [ember-metrics](https://github.com/adopted-ember-addons/ember-metrics) adatper for [Simple Analytics](https://simpleanalytics.com/)
 

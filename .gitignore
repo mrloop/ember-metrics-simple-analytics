@@ -18,6 +18,7 @@ node_modules/
 /npm-debug.log*
 /testem.log
 /yarn-error.log
+/ember-metrics-simple-analytics/README.md
 
 # ember-try
 /.node_modules.ember-try/
