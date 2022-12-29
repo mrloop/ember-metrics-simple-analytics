@@ -1,12 +1,19 @@
 {
   "name": "ember-metrics-simple-analytics",
   "version": "0.0.0",
-  "private": true,
-  "repository": "",
+  "private": false,
+  "repository": "https://github.com/mrloop/ember-metrics-simple-analytics",
   "license": "MIT",
-  "author": "",
+  "author": "Ewan McDougall <ewan@mrloop.com>",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-metrics",
+    "metrics",
+    "analytics",
+    "simple-analytics",
+    "simpleanalytics",
+    "tracking",
+    "gdpr"
   ],
   "scripts": {
     "prepare": "pnpm build",
