@@ -56,8 +56,9 @@
       "release": true,
       "tokenRef": "GITHUB_AUTH"
     },
-    "npm": {
-      "publish": false
-    }
+    "hooks": {
+      "after:@release-it-plugins/workspaces:bump": "pnpm i"
+    },
+    "npm": false
   }
 }
