@@ -1,13 +1,20 @@
 {
   "name": "ember-metrics-simple-analytics",
   "version": "0.0.1",
-  "description": "The default blueprint for Embroider v2 addons.",
+  "description": "ember-metrics adapter for Simple Analytics.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-metrics",
+    "metrics",
+    "analytics",
+    "simple-analytics",
+    "simpleanalytics",
+    "tracking",
+    "gdpr"
   ],
-  "repository": "",
+  "repository": "https://github.com/mrloop/ember-metrics-simple-analytics",
   "license": "MIT",
-  "author": "",
+  "author": "Ewan McDougall <ewan@mrloop.com>",
   "files": [
     "addon-main.js",
     "dist"
