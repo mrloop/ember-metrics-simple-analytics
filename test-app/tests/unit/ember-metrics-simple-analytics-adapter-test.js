@@ -55,12 +55,15 @@ module('Unit | Adapter | simple-analytics', function (hooks) {
   });
 
   module('uninstall', function () {
-    test('it removes the script element', function (assert) {
+    test('it removes the script element and global functions', async function (assert) {
       this.adapter.install();
+      await waitUntil(() => typeof window.sa_event === 'function');
       assert.true(scriptElement() instanceof HTMLScriptElement);
 
       this.adapter.uninstall();
       assert.strictEqual(scriptElement(), null);
+      assert.strictEqual(typeof window.sa_event, 'undefined');
+      assert.strictEqual(typeof window.sa_pageview, 'undefined');
     });
   });
 
