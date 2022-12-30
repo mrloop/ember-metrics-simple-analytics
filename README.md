@@ -56,7 +56,7 @@ module.exports = function (environment) {
         ignoreMetrices: ['scrolled', 'timeonpage'],
         ignorePages: ['/search/contact', '/vouchers/*'],
         mode: 'hash',
-        nonUniqueHostnames: 'checkout.stripe.com'
+        nonUniqueHostnames: 'checkout.stripe.com',
         pathOverwriter: 'myPathOverwriter',
         src: 'my-custom-script.example.org/latest.js',
       }
