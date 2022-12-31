@@ -34,7 +34,6 @@ export default class SimpleAnalytics extends BaseAdapter {
   }
 
   trackEvent(options = {}) {
-    console.log('trackEvent', options);
     if (this.loaded) {
       let { name, ...metadata } = options;
       window[this._namespaceEvent](name, metadata);
