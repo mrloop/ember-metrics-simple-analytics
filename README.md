@@ -6,7 +6,7 @@ ember-metrics-simple-analytics
 
 
 
-[ember-metrics](https://github.com/adopted-ember-addons/ember-metrics) adatper for [Simple Analytics](https://simpleanalytics.com/)
+[ember-metrics](https://github.com/adopted-ember-addons/ember-metrics) adapter for [Simple Analytics](https://simpleanalytics.com/)
 
 
 Compatibility
