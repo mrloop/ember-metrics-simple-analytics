@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "config:base",
+    ":dependencyDashboard"
+  ],
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true,
+      "stabilityDays": 3,
+      "schedule": ["every week"]
+    }
+  ]
+}
