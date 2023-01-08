@@ -33,8 +33,10 @@ To setup, you should first configure the service through `config/environemnt`:
 module.exports = function (environment) {
   var ENV = {
     metricsAdapters: [
-      name: 'SimpleAnalytics',
-      environments: ['production'],
+      {
+        name: 'SimpleAnalytics',
+        environments: ['production'],
+      }
     ]
   }
 }
@@ -46,19 +48,21 @@ See the [Simple Analytics Docs](https://docs.simpleanalytics.com) for more detai
 module.exports = function (environment) {
   var ENV = {
     metricsAdapters: [
-      name: 'SimpleAnalytics',
-      environments: ['production'],
-      config: {
-        autoCollect: 'true',
-        allowParams: 'product-id',
-        collectDnt: false,
-        hostname: 'picturewham.com',
-        ignoreMetrices: ['scrolled', 'timeonpage'],
-        ignorePages: ['/search/contact', '/vouchers/*'],
-        mode: 'hash',
-        nonUniqueHostnames: 'checkout.stripe.com',
-        pathOverwriter: 'myPathOverwriter',
-        src: 'my-custom-script.example.org/latest.js',
+      {
+        name: 'SimpleAnalytics',
+        environments: ['production'],
+        config: {
+          autoCollect: 'true',
+          allowParams: 'product-id',
+          collectDnt: false,
+          hostname: 'picturewham.com',
+          ignoreMetrices: ['scrolled', 'timeonpage'],
+          ignorePages: ['/search/contact', '/vouchers/*'],
+          mode: 'hash',
+          nonUniqueHostnames: 'checkout.stripe.com',
+          pathOverwriter: 'myPathOverwriter',
+          src: 'my-custom-script.example.org/latest.js',
+        }
       }
     ]
   }
