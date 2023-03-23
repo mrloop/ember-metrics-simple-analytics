@@ -8,8 +8,8 @@
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true,
-      "stabilityDays": 3,
-      "schedule": ["every weekend"]
+      "stabilityDays": 3
     }
-  ]
+  ],
+  "schedule": ["every weekend"]
 }
