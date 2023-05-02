@@ -156,7 +156,7 @@ importers:
         specifier: ^7.0.0
         version: 7.0.0
       ember-qunit:
-        specifier: ^6.0.0
+        specifier: ^6.2.0
         version: 6.2.0(@ember/test-helpers@2.9.3)(ember-source@4.9.3)(qunit@2.19.3)(webpack@5.75.0)
       ember-resolver:
         specifier: ^8.0.3
