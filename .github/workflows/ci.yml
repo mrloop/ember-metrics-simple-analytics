@@ -23,11 +23,11 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v3
         with:
-          node-version: 14.x
+          node-version: 16.x
       - uses: pnpm/action-setup@v2
         name: Install pnpm
         with:
-          version: 7.20
+          version: 8.4.0
           run_install: false
       - name: Install Dependencies
         run: pnpm i
@@ -44,11 +44,11 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 14.x
+          node-version: 16.x
       - uses: pnpm/action-setup@v2
         name: Install pnpm
         with:
-          version: 7.20
+          version: 8.4.0
           run_install: false
       - name: Install Dependencies
         run: pnpm i
@@ -78,11 +78,11 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v3
         with:
-          node-version: 14.x
+          node-version: 16.x
       - uses: pnpm/action-setup@v2
         name: Install pnpm
         with:
-          version: 7.20
+          version: 8.4.0
           run_install: false
       - name: Install Dependencies
         run: echo "auto-install-peers=true" >> .npmrc && pnpm i
@@ -101,11 +101,11 @@ jobs:
       - name: Install node
         uses: actions/setup-node@v3
         with:
-          node-version: 14.x
+          node-version: 16.x
       - uses: pnpm/action-setup@v2
         name: Install pnpm
         with:
-          version: 7.20
+          version: 8.4.0
           run_install: false
       - name: Install Dependencies
         run: pnpm i
