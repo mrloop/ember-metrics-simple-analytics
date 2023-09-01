@@ -12,8 +12,8 @@ importers:
         specifier: 6.0.0
         version: 6.0.0(release-it@15.11.0)
       '@release-it-plugins/workspaces':
-        specifier: 3.2.0
-        version: 3.2.0(release-it@15.11.0)
+        specifier: 4.0.0
+        version: 4.0.0(release-it@15.11.0)
       concurrently:
         specifier: ^7.2.1
         version: 7.6.0
@@ -1452,7 +1452,7 @@ packages:
       calculate-cache-key-for-tree: 2.0.0
       ember-cli-babel: 7.26.11
       ember-cli-version-checker: 5.1.2
-      semver: 7.3.8
+      semver: 7.5.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1539,7 +1539,7 @@ packages:
       find-up: 5.0.0
       lodash: 4.17.21
       resolve: 1.22.1
-      semver: 7.3.8
+      semver: 7.5.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1590,7 +1590,7 @@ packages:
       js-string-escape: 1.0.1
       lodash: 4.17.21
       resolve-package-path: 4.0.3
-      semver: 7.3.8
+      semver: 7.5.1
       typescript-memoize: 1.1.1
     transitivePeerDependencies:
       - supports-color
@@ -2072,16 +2072,16 @@ packages:
       - supports-color
     dev: true
 
-  /@release-it-plugins/workspaces@3.2.0(release-it@15.11.0):
-    resolution: {integrity: sha512-ooEIgwb4qwGFQa9kXoTaQDHgD2Vymy5Z/aKL1JefnVUg1hiKL8Lh5fEfkDXggeXetTYk+SaFm2YNLrVOarX+Kw==}
-    engines: {node: '>= 14'}
+  /@release-it-plugins/workspaces@4.0.0(release-it@15.11.0):
+    resolution: {integrity: sha512-79qsR770mvuQeTSMnOjrEJuJHQ4x1KyUkZjqCOQ/UxjK+igNYYDsLK26LpKTweeTjpbpmLYaOg6bl+28M5CO0A==}
+    engines: {node: '>= 16'}
     peerDependencies:
-      release-it: ^14.0.0 || ^15.2.0
+      release-it: ^14.0.0 || ^15.2.0 || ^16.0.0
     dependencies:
       detect-indent: 6.1.0
       detect-newline: 3.1.0
       release-it: 15.11.0
-      semver: 7.3.8
+      semver: 7.5.1
       url-join: 4.0.1
       validate-peer-dependencies: 1.2.0
       walk-sync: 2.2.0
@@ -5140,7 +5140,7 @@ packages:
       parse5: 6.0.1
       resolve: 1.22.1
       resolve-package-path: 4.0.3
-      semver: 7.3.8
+      semver: 7.5.1
       style-loader: 2.0.0(webpack@5.75.0)
       typescript-memoize: 1.1.1
       walk-sync: 3.0.0
@@ -5374,7 +5374,7 @@ packages:
       fs-extra: 9.1.0
       resolve: 1.22.1
       rsvp: 4.8.5
-      semver: 7.3.8
+      semver: 7.5.1
       stagehand: 1.0.0
       walk-sync: 2.2.0
     transitivePeerDependencies:
@@ -5403,7 +5403,7 @@ packages:
     engines: {node: 10.* || >= 12.*}
     dependencies:
       resolve-package-path: 3.1.0
-      semver: 7.3.8
+      semver: 7.5.1
       silent-error: 1.1.1
     transitivePeerDependencies:
       - supports-color
@@ -11349,7 +11349,6 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
-    dev: true
 
   /send@0.18.0:
     resolution: {integrity: sha512-qqWzuOjSFOuqPjFe4NOsMLafToQQwBSOEpS+FwEt3A2V3vKubTquT3vmLTQpFgMXp8AlFWFuP1qKaJZOtPpVXg==}
