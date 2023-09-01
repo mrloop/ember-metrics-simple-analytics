@@ -33,7 +33,7 @@
     "concurrently": "^7.2.1",
     "prettier": "^2.5.1",
     "release-it": "15.11.0",
-    "@release-it-plugins/lerna-changelog": "5.0.0",
+    "@release-it-plugins/lerna-changelog": "6.0.0",
     "@release-it-plugins/workspaces": "3.2.0"
   },
   "publishConfig": {
