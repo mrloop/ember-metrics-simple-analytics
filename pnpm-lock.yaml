@@ -118,8 +118,8 @@ importers:
         specifier: ^2.5.0
         version: 2.5.0(webpack@5.75.0)
       ember-cli:
-        specifier: ~5.3.0
-        version: 5.3.0
+        specifier: ~5.4.0
+        version: 5.4.0
       ember-cli-app-version:
         specifier: ^6.0.0
         version: 6.0.1(ember-source@5.4.0)
@@ -128,7 +128,7 @@ importers:
         version: 8.0.0(@babel/core@7.22.11)
       ember-cli-dependency-checker:
         specifier: ^3.3.1
-        version: 3.3.1(ember-cli@5.3.0)
+        version: 3.3.1(ember-cli@5.4.0)
       ember-cli-htmlbars:
         specifier: ^6.1.1
         version: 6.1.1
@@ -6714,14 +6714,14 @@ packages:
       - supports-color
     dev: true
 
-  /ember-cli-dependency-checker@3.3.1(ember-cli@5.3.0):
+  /ember-cli-dependency-checker@3.3.1(ember-cli@5.4.0):
     resolution: {integrity: sha512-Tg6OeijjXNKWkDm6057Tr0N9j9Vlz/ITewXWpn1A/+Wbt3EowBx5ZKfvoupqz05EznKgL1B/ecG0t+JN7Qm6MA==}
     engines: {node: '>= 6'}
     peerDependencies:
       ember-cli: ^3.2.0 || ^4.0.0
     dependencies:
       chalk: 2.4.2
-      ember-cli: 5.3.0
+      ember-cli: 5.4.0
       find-yarn-workspace-root: 1.2.1
       is-git-url: 1.0.0
       resolve: 1.22.1
@@ -6962,12 +6962,11 @@ packages:
       - supports-color
     dev: true
 
-  /ember-cli@5.3.0:
-    resolution: {integrity: sha512-Om19C49hAYFgVduidtfQPbZcR3bmdHhYJ4XxEEEvW+sP1WAXNOPWf5e3W6HGDarjIeg04bZxOMkMZy28bubOBA==}
-    engines: {node: '>= 16'}
+  /ember-cli@5.4.0:
+    resolution: {integrity: sha512-00RfyeDGTo9OtsmxbIqJIKM0wZvvOGAn1w4A9hFrENcuE7I3HKCb3QYKLHLXywG91fTsWbmXRfCL1kQ5pOva4A==}
+    engines: {node: '>= 18'}
     hasBin: true
     dependencies:
-      '@babel/core': 7.22.11
       '@pnpm/find-workspace-dir': 6.0.2
       broccoli: 3.5.2
       broccoli-builder: 0.18.14
@@ -7017,11 +7016,10 @@ packages:
       heimdalljs-logger: 0.1.10
       http-proxy: 1.18.1
       inflection: 2.0.1
-      inquirer: 9.2.10
+      inquirer: 9.2.11
       is-git-url: 1.0.0
       is-language-code: 3.1.0
       isbinaryfile: 5.0.0
-      leek: 0.0.24
       lodash.template: 4.5.0
       markdown-it: 13.0.1
       markdown-it-terminal: 0.4.0(markdown-it@13.0.1)
@@ -7048,7 +7046,6 @@ packages:
       testem: 3.10.1
       tiny-lr: 2.0.0
       tree-sync: 2.1.0
-      uuid: 9.0.0
       walk-sync: 3.0.0
       watch-detector: 1.0.2
       workerpool: 6.4.2
@@ -9504,27 +9501,6 @@ packages:
       through: 2.3.8
     dev: true
 
-  /inquirer@9.2.10:
-    resolution: {integrity: sha512-tVVNFIXU8qNHoULiazz612GFl+yqNfjMTbLuViNJE/d860Qxrd3NMrse8dm40VUQLOQeULvaQF8lpAhvysjeyA==}
-    engines: {node: '>=14.18.0'}
-    dependencies:
-      '@ljharb/through': 2.3.9
-      ansi-escapes: 4.3.2
-      chalk: 5.3.0
-      cli-cursor: 3.1.0
-      cli-width: 4.1.0
-      external-editor: 3.1.0
-      figures: 5.0.0
-      lodash: 4.17.21
-      mute-stream: 1.0.0
-      ora: 5.4.1
-      run-async: 3.0.0
-      rxjs: 7.8.1
-      string-width: 4.2.3
-      strip-ansi: 6.0.1
-      wrap-ansi: 6.2.0
-    dev: true
-
   /inquirer@9.2.11:
     resolution: {integrity: sha512-B2LafrnnhbRzCWfAdOXisUzL89Kg8cVJlYmhqoi3flSiV/TveO+nsXwgKr9h9PIo+J1hz7nBSk6gegRIMBBf7g==}
     engines: {node: '>=14.18.0'}
@@ -10267,16 +10243,6 @@ packages:
       invert-kv: 3.0.1
     dev: true
 
-  /leek@0.0.24:
-    resolution: {integrity: sha512-6PVFIYXxlYF0o6hrAsHtGpTmi06otkwNrMcmQ0K96SeSRHPREPa9J3nJZ1frliVH7XT0XFswoJFQoXsDukzGNQ==}
-    dependencies:
-      debug: 2.6.9
-      lodash.assign: 3.2.0
-      rsvp: 3.6.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /lerna-changelog@2.2.0:
     resolution: {integrity: sha512-yjYNAHrbnw8xYFKmYWJEP52Tk4xSdlNmzpYr26+3glbSGDmpe8UMo8f9DlEntjGufL+opup421oVTXcLshwAaQ==}
     engines: {node: 12.* || 14.* || >= 16}
@@ -10392,34 +10358,11 @@ packages:
       p-locate: 6.0.0
     dev: true
 
-  /lodash._baseassign@3.2.0:
-    resolution: {integrity: sha512-t3N26QR2IdSN+gqSy9Ds9pBu/J1EAFEshKlUHpJG3rvyJOYgcELIxcIeKKfZk7sjOz11cFfzJRsyFry/JyabJQ==}
-    dependencies:
-      lodash._basecopy: 3.0.1
-      lodash.keys: 3.1.2
-    dev: true
-
-  /lodash._basecopy@3.0.1:
-    resolution: {integrity: sha512-rFR6Vpm4HeCK1WPGvjZSJ+7yik8d8PVUdCJx5rT2pogG4Ve/2ZS7kfmO5l5T2o5V2mqlNIfSF5MZlr1+xOoYQQ==}
-    dev: true
-
   /lodash._baseflatten@3.1.4:
     resolution: {integrity: sha512-fESngZd+X4k+GbTxdMutf8ohQa0s3sJEHIcwtu4/LsIQ2JTDzdRxDCMQjW+ezzwRitLmHnacVVmosCbxifefbw==}
     dependencies:
       lodash.isarguments: 3.1.0
       lodash.isarray: 3.0.4
-    dev: true
-
-  /lodash._bindcallback@3.0.1:
-    resolution: {integrity: sha512-2wlI0JRAGX8WEf4Gm1p/mv/SZ+jLijpj0jyaE/AXeuQphzCgD8ZQW4oSpoN8JAopujOFGU3KMuq7qfHBWlGpjQ==}
-    dev: true
-
-  /lodash._createassigner@3.1.1:
-    resolution: {integrity: sha512-LziVL7IDnJjQeeV95Wvhw6G28Z8Q6da87LWKOPWmzBLv4u6FAT/x5v00pyGW0u38UoogNF2JnD3bGgZZDaNEBw==}
-    dependencies:
-      lodash._bindcallback: 3.0.1
-      lodash._isiterateecall: 3.0.9
-      lodash.restparam: 3.6.1
     dev: true
 
   /lodash._getnative@3.9.1:
@@ -10432,14 +10375,6 @@ packages:
 
   /lodash._reinterpolate@3.0.0:
     resolution: {integrity: sha512-xYHt68QRoYGjeeM/XOE1uJtvXQAgvszfBhjV4yvsQH0u2i9I6cI6c6/eG4Hh3UAOVn0y/xAXwmTzEay49Q//HA==}
-    dev: true
-
-  /lodash.assign@3.2.0:
-    resolution: {integrity: sha512-/VVxzgGBmbphasTg51FrztxQJ/VgAUpol6zmJuSVSGcNg4g7FA4z7rQV8Ovr9V3vFBNWZhvKWHfpAytjTVUfFA==}
-    dependencies:
-      lodash._baseassign: 3.2.0
-      lodash._createassigner: 3.1.1
-      lodash.keys: 3.1.2
     dev: true
 
   /lodash.assignin@4.2.0:
@@ -10510,14 +10445,6 @@ packages:
     resolution: {integrity: sha512-N8XRTIMMqqDgSy4VLKPnJ/+hpGZN+PHQiJnSenYqPaVV/NCqEogTnAdZLQiGKhxX+JCs8waWq2t1XHWKOmlY8g==}
     dev: true
 
-  /lodash.keys@3.1.2:
-    resolution: {integrity: sha512-CuBsapFjcubOGMn3VD+24HOAPxM79tH+V6ivJL3CHYjtrawauDJHUk//Yew9Hvc6e9rbCrURGk8z6PC+8WJBfQ==}
-    dependencies:
-      lodash._getnative: 3.9.1
-      lodash.isarguments: 3.1.0
-      lodash.isarray: 3.0.4
-    dev: true
-
   /lodash.memoize@4.1.2:
     resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==}
     dev: true
@@ -10528,10 +10455,6 @@ packages:
 
   /lodash.omit@4.5.0:
     resolution: {integrity: sha512-XeqSp49hNGmlkj2EJlfrQFIzQ6lXdNro9sddtQzcJY8QaoC2GO0DT7xaIokHeyM+mIT0mPMlPvkYzg2xCuHdZg==}
-    dev: true
-
-  /lodash.restparam@3.6.1:
-    resolution: {integrity: sha512-L4/arjjuq4noiUJpt3yS6KIKDtJwNe2fIYgMqyYYKoeIfV1iEqvPwhCx23o+R9dzouGihDAPN1dTIRWa7zk8tw==}
     dev: true
 
   /lodash.template@4.5.0:
@@ -14350,11 +14273,6 @@ packages:
 
   /uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
-    hasBin: true
-    dev: true
-
-  /uuid@9.0.0:
-    resolution: {integrity: sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==}
     hasBin: true
     dev: true
 
