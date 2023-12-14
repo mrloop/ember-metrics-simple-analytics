@@ -98,7 +98,7 @@ importers:
         version: 2.0.0
       '@ember/test-helpers':
         specifier: ^3.0.3
-        version: 3.0.3(ember-source@5.4.0)(webpack@5.75.0)
+        version: 3.0.3(ember-source@5.5.0)(webpack@5.75.0)
       '@embroider/test-setup':
         specifier: 3.0.3
         version: 3.0.3
@@ -122,7 +122,7 @@ importers:
         version: 5.4.0
       ember-cli-app-version:
         specifier: ^6.0.0
-        version: 6.0.1(ember-source@5.4.0)
+        version: 6.0.1(ember-source@5.5.0)
       ember-cli-babel:
         specifier: ^8.0.0
         version: 8.0.0(@babel/core@7.22.11)
@@ -161,13 +161,13 @@ importers:
         version: 8.0.0
       ember-qunit:
         specifier: ^8.0.0
-        version: 8.0.0(@ember/test-helpers@3.0.3)(ember-source@5.4.0)(qunit@2.19.3)
+        version: 8.0.0(@ember/test-helpers@3.0.3)(ember-source@5.5.0)(qunit@2.19.3)
       ember-resolver:
         specifier: ^11.0.0
-        version: 11.0.1(ember-source@5.4.0)
+        version: 11.0.1(ember-source@5.5.0)
       ember-source:
-        specifier: ~5.4.0
-        version: 5.4.0(@babel/core@7.22.11)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.75.0)
+        specifier: ~5.5.0
+        version: 5.5.0(@babel/core@7.22.11)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.75.0)
       ember-source-channel-url:
         specifier: ^3.0.0
         version: 3.0.0
@@ -2579,7 +2579,7 @@ packages:
       - supports-color
     dev: false
 
-  /@ember/test-helpers@3.0.3(ember-source@5.4.0)(webpack@5.75.0):
+  /@ember/test-helpers@3.0.3(ember-source@5.5.0)(webpack@5.75.0):
     resolution: {integrity: sha512-W8fEWritv36W216wmuusOlsUJs+iDFkOvHratI8tw466NV4deq9TVej1p5DtUFeDUUP/E14IxqrNNC3qaYszfQ==}
     engines: {node: 16.* || >= 18}
     peerDependencies:
@@ -2592,7 +2592,7 @@ packages:
       ember-auto-import: 2.6.3(webpack@5.75.0)
       ember-cli-babel: 7.26.11
       ember-cli-htmlbars: 6.3.0
-      ember-source: 5.4.0(@babel/core@7.22.11)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.75.0)
+      ember-source: 5.5.0(@babel/core@7.22.11)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.75.0)
     transitivePeerDependencies:
       - '@glint/template'
       - supports-color
@@ -4596,8 +4596,8 @@ packages:
       underscore: 1.13.6
     dev: true
 
-  /backburner.js@2.7.0:
-    resolution: {integrity: sha512-eBZC6r7wT+YYAOKeru8IqgzOimz3VgyspXiZ1k6MI8i10zUdU8cnNII56rlnItQ89cHgQO3C/nPuFW3V9di+zg==}
+  /backburner.js@2.8.0:
+    resolution: {integrity: sha512-zYXY0KvpD7/CWeOLF576mV8S+bQsaIoj/GNLXXB+Eb8SJcQy5lqSjkRrZ0MZhdKUs9QoqmGNIEIe3NQfGiiscQ==}
     dev: true
 
   /balanced-match@1.0.2:
@@ -6617,14 +6617,14 @@ packages:
       - webpack
     dev: true
 
-  /ember-cli-app-version@6.0.1(ember-source@5.4.0):
+  /ember-cli-app-version@6.0.1(ember-source@5.5.0):
     resolution: {integrity: sha512-XA1FwkWA5QytmWF0jcJqEr3jcZoiCl9Fb33TZgOVfClL7Voxe+/RwzISEprBRQgbf7j8z1xf8/RJCKfclUy3rQ==}
     engines: {node: 14.* || 16.* || >= 18}
     peerDependencies:
       ember-source: ^3.28.0 || >= 4.0.0
     dependencies:
       ember-cli-babel: 7.26.11
-      ember-source: 5.4.0(@babel/core@7.22.11)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.75.0)
+      ember-source: 5.5.0(@babel/core@7.22.11)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.75.0)
       git-repo-info: 2.1.1
     transitivePeerDependencies:
       - supports-color
@@ -7175,25 +7175,25 @@ packages:
       - supports-color
     dev: true
 
-  /ember-qunit@8.0.0(@ember/test-helpers@3.0.3)(ember-source@5.4.0)(qunit@2.19.3):
+  /ember-qunit@8.0.0(@ember/test-helpers@3.0.3)(ember-source@5.5.0)(qunit@2.19.3):
     resolution: {integrity: sha512-H61shPfAvaTLpPqZgk5QPvYtC1q171EVF62sU+y/i693cTX728ukYWj5NYbrOX51OAKc5aXfjepdnCOYKIOmfg==}
     peerDependencies:
       '@ember/test-helpers': '>=3.0.3'
       ember-source: '>=4.0.0'
       qunit: ^2.13.0
     dependencies:
-      '@ember/test-helpers': 3.0.3(ember-source@5.4.0)(webpack@5.75.0)
+      '@ember/test-helpers': 3.0.3(ember-source@5.5.0)(webpack@5.75.0)
       '@embroider/addon-shim': 1.8.7
       '@embroider/macros': 1.13.1
       ember-cli-test-loader: 3.1.0
-      ember-source: 5.4.0(@babel/core@7.22.11)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.75.0)
+      ember-source: 5.5.0(@babel/core@7.22.11)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.75.0)
       qunit: 2.19.3
     transitivePeerDependencies:
       - '@glint/template'
       - supports-color
     dev: true
 
-  /ember-resolver@11.0.1(ember-source@5.4.0):
+  /ember-resolver@11.0.1(ember-source@5.5.0):
     resolution: {integrity: sha512-ucBk3oM+PR+AfYoSUXeQh8cDQS1sSiEKp4Pcgbew5cFMSqPxJfqd1zyZsfQKNTuyubeGmWxBOyMVSTvX2LeCyg==}
     engines: {node: 14.* || 16.* || >= 18}
     peerDependencies:
@@ -7203,7 +7203,7 @@ packages:
         optional: true
     dependencies:
       ember-cli-babel: 7.26.11
-      ember-source: 5.4.0(@babel/core@7.22.11)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.75.0)
+      ember-source: 5.5.0(@babel/core@7.22.11)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.75.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -7232,8 +7232,8 @@ packages:
       - encoding
     dev: true
 
-  /ember-source@5.4.0(@babel/core@7.22.11)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.75.0):
-    resolution: {integrity: sha512-y2fPd7DJ8D9IBjHSf6CPwU8TqNpqytpMgFyzf+9tPvu/u2Wdd45jEd2W1weKE3URQwPTcA0vK8Q1w6uzLOx/EA==}
+  /ember-source@5.5.0(@babel/core@7.22.11)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.75.0):
+    resolution: {integrity: sha512-OTJ9kt76wyvEkdSdjmonoLUTTqYg5OaFxicSiwKsjX9gJ9bVzuCu3uInhBKEfTdC5lSBMEcVuGk8f9LUF3pxJQ==}
     engines: {node: '>= 16.*'}
     peerDependencies:
       '@glimmer/component': ^1.1.2
@@ -7261,7 +7261,7 @@ packages:
       '@simple-dom/interface': 1.4.0
       babel-plugin-debug-macros: 0.3.4(@babel/core@7.22.11)
       babel-plugin-filter-imports: 4.0.0
-      backburner.js: 2.7.0
+      backburner.js: 2.8.0
       broccoli-concat: 4.2.5
       broccoli-debug: 0.6.5
       broccoli-file-creator: 2.1.1
@@ -7279,11 +7279,11 @@ packages:
       ember-cli-version-checker: 5.1.2
       ember-router-generator: 2.0.0
       inflection: 2.0.1
-      resolve: 1.22.6
       route-recognizer: 0.3.4
       router_js: 8.0.3(route-recognizer@0.3.4)(rsvp@4.8.5)
       semver: 7.5.4
       silent-error: 1.1.1
+      simple-html-tokenizer: 0.5.11
     transitivePeerDependencies:
       - '@babel/core'
       - '@glint/template'
