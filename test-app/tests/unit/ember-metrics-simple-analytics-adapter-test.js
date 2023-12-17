@@ -71,18 +71,22 @@ module('Unit | Adapter | simple-analytics', function (hooks) {
     test('#trackEvent calls simpleanalytics with the correct arguments', async function (assert) {
       this.adapter.install();
       await waitUntil(() => this.adapter.loaded);
-      assert.expect(1);
-      window.sa_event = (...args) =>
+      let done = assert.async();
+      window.sa_event = (...args) => {
         assert.deepEqual(args, ['test', { plan: 'starter' }]);
+        done();
+      };
       this.adapter.trackEvent({ name: 'test', plan: 'starter' });
     });
 
     test('#trackPage calls simpleanalytics with the correct arguments', async function (assert) {
       this.adapter.install();
       await waitUntil(() => this.adapter.loaded);
-      assert.expect(1);
-      window.sa_pageview = (...args) =>
+      let done = assert.async();
+      window.sa_pageview = (...args) => {
         assert.deepEqual(args, ['/test', { plan: 'starter' }]);
+        done();
+      };
       this.adapter.trackPage({ path: '/test', plan: 'starter' });
     });
 
@@ -94,18 +98,22 @@ module('Unit | Adapter | simple-analytics', function (hooks) {
       test('#trackEvent calls simpleanalytics with the correct arguments', async function (assert) {
         this.adapter.install();
         await waitUntil(() => this.adapter.loaded);
-        assert.expect(1);
-        window.mrloop_event = (...args) =>
+        let done = assert.async();
+        window.mrloop_event = (...args) => {
           assert.deepEqual(args, ['test', { plan: 'starter' }]);
+          done();
+        };
         this.adapter.trackEvent({ name: 'test', plan: 'starter' });
       });
 
       test('#trackPage calls simpleanalytics with the correct arguments', async function (assert) {
         this.adapter.install();
         await waitUntil(() => this.adapter.loaded);
-        assert.expect(1);
-        window.mrloop_pageview = (...args) =>
+        let done = assert.async();
+        window.mrloop_pageview = (...args) => {
           assert.deepEqual(args, ['/test', { plan: 'starter' }]);
+          done();
+        };
         this.adapter.trackPage({ path: '/test', plan: 'starter' });
       });
     });
