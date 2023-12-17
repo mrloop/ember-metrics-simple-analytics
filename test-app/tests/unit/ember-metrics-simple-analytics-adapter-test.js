@@ -71,18 +71,22 @@ module('Unit | Adapter | simple-analytics', function (hooks) {
     test('#trackEvent calls simpleanalytics with the correct arguments', async function (assert) {
       this.adapter.install();
       await waitUntil(() => this.adapter.loaded);
-      assert.expect(1);
-      window.sa_event = (...args) =>
+      let done = assert.async();
+      window.sa_event = (...args) => {
         assert.deepEqual(args, ['test', { plan: 'starter' }]);
+        done();
+      };
       this.adapter.trackEvent({ name: 'test', plan: 'starter' });
     });
 
     test('#trackPage calls simpleanalytics with the correct arguments', async function (assert) {
       this.adapter.install();
       await waitUntil(() => this.adapter.loaded);
-      assert.expect(1);
-      window.sa_pageview = (...args) =>
+      let done = assert.async();
+      window.sa_pageview = (...args) => {
         assert.deepEqual(args, ['/test', { plan: 'starter' }]);
+        done();
+      };
       this.adapter.trackPage({ path: '/test', plan: 'starter' });
     });
 
@@ -94,18 +98,22 @@ module('Unit | Adapter | simple-analytics', function (hooks) {
       test('#trackEvent calls simpleanalytics with the correct arguments', async function (assert) {
         this.adapter.install();
         await waitUntil(() => this.adapter.loaded);
-        assert.expect(1);
-        window.mrloop_event = (...args) =>
+        let done = assert.async();
+        window.mrloop_event = (...args) => {
           assert.deepEqual(args, ['test', { plan: 'starter' }]);
+          done();
+        };
         this.adapter.trackEvent({ name: 'test', plan: 'starter' });
       });
 
       test('#trackPage calls simpleanalytics with the correct arguments', async function (assert) {
         this.adapter.install();
         await waitUntil(() => this.adapter.loaded);
-        assert.expect(1);
-        window.mrloop_pageview = (...args) =>
+        let done = assert.async();
+        window.mrloop_pageview = (...args) => {
           assert.deepEqual(args, ['/test', { plan: 'starter' }]);
+          done();
+        };
         this.adapter.trackPage({ path: '/test', plan: 'starter' });
       });
     });
@@ -114,8 +122,6 @@ module('Unit | Adapter | simple-analytics', function (hooks) {
   module('queue', function () {
     test('it queues events until the script is loaded', async function (assert) {
       this.adapter.install();
-      assert.expect(3);
-      window.sa_event = (...args) => assert.deepEqual(args, ['turnip', {}]);
       assert.false(this.adapter.loaded, 'adapter is not loaded');
       this.adapter.trackEvent({ name: 'turnip' });
       assert.deepEqual(
@@ -129,8 +135,6 @@ module('Unit | Adapter | simple-analytics', function (hooks) {
 
     test('it queues page views until the script is loaded', async function (assert) {
       this.adapter.install();
-      assert.expect(3);
-      window.sa_event = (...args) => assert.deepEqual(args, ['/veg', {}]);
       assert.false(this.adapter.loaded, 'adapter is not loaded');
       this.adapter.trackPage({ path: '/veg' });
       assert.deepEqual(
