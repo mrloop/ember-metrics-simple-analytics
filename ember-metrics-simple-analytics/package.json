@@ -1,6 +1,6 @@
 {
   "name": "ember-metrics-simple-analytics",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "ember-metrics adapter for Simple Analytics.",
   "keywords": [
     "ember-addon",

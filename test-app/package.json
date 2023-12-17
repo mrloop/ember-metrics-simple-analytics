@@ -1,6 +1,6 @@
 {
   "name": "test-app",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "private": true,
   "description": "Small description for test-app goes here",
   "repository": "",
@@ -45,7 +45,7 @@
     "ember-fetch": "^8.1.2",
     "ember-load-initializers": "^2.1.2",
     "ember-metrics": "2.0.0-beta.2",
-    "ember-metrics-simple-analytics": "^0.0.2",
+    "ember-metrics-simple-analytics": "^1.0.0",
     "ember-page-title": "^8.0.0",
     "ember-qunit": "^8.0.0",
     "ember-resolver": "^11.0.0",
