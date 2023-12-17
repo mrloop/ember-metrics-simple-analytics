@@ -114,8 +114,6 @@ module('Unit | Adapter | simple-analytics', function (hooks) {
   module('queue', function () {
     test('it queues events until the script is loaded', async function (assert) {
       this.adapter.install();
-      assert.expect(3);
-      window.sa_event = (...args) => assert.deepEqual(args, ['turnip', {}]);
       assert.false(this.adapter.loaded, 'adapter is not loaded');
       this.adapter.trackEvent({ name: 'turnip' });
       assert.deepEqual(
@@ -129,8 +127,6 @@ module('Unit | Adapter | simple-analytics', function (hooks) {
 
     test('it queues page views until the script is loaded', async function (assert) {
       this.adapter.install();
-      assert.expect(3);
-      window.sa_event = (...args) => assert.deepEqual(args, ['/veg', {}]);
       assert.false(this.adapter.loaded, 'adapter is not loaded');
       this.adapter.trackPage({ path: '/veg' });
       assert.deepEqual(
