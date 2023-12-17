@@ -30,7 +30,7 @@ module('Unit | Adapter | simple-analytics', function (hooks) {
       assert.strictEqual(scriptElement().dataset.hostname, 'picturewham.com');
       assert.strictEqual(
         scriptElement().dataset.ignoreMetrics,
-        'timeonpage,scrolled'
+        'timeonpage,scrolled',
       );
     });
 
@@ -127,7 +127,7 @@ module('Unit | Adapter | simple-analytics', function (hooks) {
       assert.deepEqual(
         this.adapter.queue,
         [{ fncName: 'trackEvent', options: { name: 'turnip' } }],
-        'queue is populated'
+        'queue is populated',
       );
       await waitUntil(() => this.adapter.loaded);
       assert.deepEqual(this.adapter.queue, [], 'queue is emptied');
@@ -140,7 +140,7 @@ module('Unit | Adapter | simple-analytics', function (hooks) {
       assert.deepEqual(
         this.adapter.queue,
         [{ fncName: 'trackPage', options: { path: '/veg' } }],
-        'queue is populated'
+        'queue is populated',
       );
       await waitUntil(() => this.adapter.loaded);
 
