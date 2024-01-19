@@ -34,7 +34,7 @@
     "prettier": "^3.0.0",
     "release-it": "17.0.1",
     "@release-it-plugins/lerna-changelog": "6.1.0",
-    "@release-it-plugins/workspaces": "4.0.0"
+    "@release-it-plugins/workspaces": "4.2.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
