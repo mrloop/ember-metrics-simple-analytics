@@ -118,8 +118,8 @@ importers:
         specifier: ^2.5.0
         version: 2.7.2(webpack@5.91.0)
       ember-cli:
-        specifier: ~5.7.0
-        version: 5.7.0(handlebars@4.7.8)(lodash@4.17.21)(underscore@1.13.6)
+        specifier: ~5.8.0
+        version: 5.8.1(handlebars@4.7.8)(underscore@1.13.6)
       ember-cli-app-version:
         specifier: ^6.0.0
         version: 6.0.1(ember-source@5.8.0(@babel/core@7.24.4)(@glimmer/component@1.1.2(@babel/core@7.24.4))(rsvp@4.8.5)(webpack@5.91.0))
@@ -128,7 +128,7 @@ importers:
         version: 8.2.0(@babel/core@7.24.4)
       ember-cli-dependency-checker:
         specifier: ^3.3.1
-        version: 3.3.2(ember-cli@5.7.0(handlebars@4.7.8)(lodash@4.17.21)(underscore@1.13.6))
+        version: 3.3.2(ember-cli@5.8.1(handlebars@4.7.8)(underscore@1.13.6))
       ember-cli-htmlbars:
         specifier: ^6.1.1
         version: 6.3.0
@@ -253,10 +253,6 @@ packages:
     peerDependencies:
       '@babel/core': ^7.11.0
       eslint: ^7.5.0 || ^8.0.0
-
-  '@babel/generator@7.23.0':
-    resolution: {integrity: sha512-lN85QRR+5IbYrMWM6Y4pE/noaQtg4pNiqeNGX60eqOfo6gtEj6uw/JagelB8vVztSd7R6M5n1+PQkDbHbBRU4g==}
-    engines: {node: '>=6.9.0'}
 
   '@babel/generator@7.24.4':
     resolution: {integrity: sha512-Xd6+v6SnjWVx/nus+y0l1sxMOTOMBkyL4+BIdbALyatQnAe/SRVjANeDPSCYaX+i1iJmuGSKf3Z+E+V/va1Hvw==}
@@ -930,16 +926,8 @@ packages:
     resolution: {integrity: sha512-Bkf2q8lMB0AFpX0NFEqSbx1OkTHf0f+0j82mkw+ZpzBnkk7e9Ql0891vlfgi+kHwOk8tQjiQHpqh4LaSa0fKEA==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/traverse@7.23.0':
-    resolution: {integrity: sha512-t/QaEvyIoIkwzpiZ7aoSKK8kObQYeF7T2v+dazAYCb8SXtp58zEVkWW7zAnju8FNKNdr4ScAOEDmMItbyOmEYw==}
-    engines: {node: '>=6.9.0'}
-
   '@babel/traverse@7.24.1':
     resolution: {integrity: sha512-xuU6o9m68KeqZbQuDt2TcKSxUw/mrsvavlEqQ1leZ/B+C9tk6E4sRWy97WaXgvq5E+nU3cXMxv3WKOCanVMCmQ==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/types@7.23.0':
-    resolution: {integrity: sha512-0oIyUfKoI3mSqMvsxBdclDwxXKXAUA8v/apZbc+iSyARYou1o8ZGDxbUYyLFoW2arqS2jDGqJuZvv1d/io1axg==}
     engines: {node: '>=6.9.0'}
 
   '@babel/types@7.24.0':
@@ -1211,10 +1199,6 @@ packages:
   '@lint-todo/utils@13.1.1':
     resolution: {integrity: sha512-F5z53uvRIF4dYfFfJP3a2Cqg+4P1dgJchJsFnsZE0eZp0LK8X7g2J0CsJHRgns+skpXOlM7n5vFGwkWCWj8qJg==}
     engines: {node: 12.* || >= 14}
-
-  '@ljharb/through@2.3.12':
-    resolution: {integrity: sha512-ajo/heTlG3QgC8EGP6APIejksVAYt4ayz4tqoP3MolFELzcH1x1fzwEYRJTPO0IELutZ5HQ0c26/GqAYy79u3g==}
-    engines: {node: '>= 0.4'}
 
   '@ljharb/through@2.3.13':
     resolution: {integrity: sha512-/gKJun8NNiWGZJkGzI/Ragc53cOdcLNdzjLaIa+GEjguQs0ulsurx8WN0jijdK9yPqDvziX995sMRLyLt1uZMQ==}
@@ -3117,8 +3101,8 @@ packages:
     resolution: {integrity: sha512-rk7GY+FmLn/2e22HsZs0Ycrz8HQ1W3Fv+2TFOuEFW9optnDXDgkntPBIl6gact/LHsfBM5RKbM3dHsIIeLgl0Q==}
     engines: {node: 10.* || >= 12.*}
 
-  ember-cli@5.7.0:
-    resolution: {integrity: sha512-MKHVcRpDk1ENUCCRGGqZ8yfkCsszvSUbwO09h14vqcfaqcJkOWI+p0oynmdZQMM8OkZp484oLe3+CZCsXO9LfA==}
+  ember-cli@5.8.1:
+    resolution: {integrity: sha512-rW7NFCaC02Bj52ZaI22UM43YT7gaRNLkQzBfhZYVpWW1+SMrdQXCxuPs6kqKRxqk4xauUpfCzCDFH92icq+mKg==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -3206,9 +3190,6 @@ packages:
     resolution: {integrity: sha512-fCh+rOK6z+/tsdkTbOE+e7f84P6ObnIRQrCCrnu21E4X05hPeradikIkRMhJdxn4NWrxitfZskQDd37TR/lsNQ==}
     engines: {node: 12.* || 14.* || >= 16.*}
     hasBin: true
-
-  ember-template-tag@2.3.15:
-    resolution: {integrity: sha512-uvFt+eIE4788Yr3X1wYLrh+PYYmasmREh2IoShIrZvOW2dOfC+elSZeqeEacNhbKJUX3tT9XUKlbpYFVwvSvyA==}
 
   ember-try-config@4.0.0:
     resolution: {integrity: sha512-jAv7fqYJK7QYYekPc/8Nr7KOqDpv/asqM6F8xcRnbmf9UrD35BkSffY63qUuiD9e0aR5qiMNBIQzH8f65rGDqw==}
@@ -4180,10 +4161,6 @@ packages:
   inquirer@7.3.3:
     resolution: {integrity: sha512-JG3eIAj5V9CwcGvuOmoo6LB9kbAYT8HXffUl6memuszlwDC/qvFAJw49XJ5NROSFNPxp3iQg1GqkFhaY/CR0IA==}
     engines: {node: '>=8.0.0'}
-
-  inquirer@9.2.14:
-    resolution: {integrity: sha512-4ByIMt677Iz5AvjyKrDpzaepIyMewNvDcvwpVVRZNmy9dLakVoVgdCHZXbK1SlVJra1db0JZ6XkJyHsanpdrdQ==}
-    engines: {node: '>=18'}
 
   inquirer@9.2.19:
     resolution: {integrity: sha512-WpxOT71HGsFya6/mj5PUue0sWwbpbiPfAR+332zLj/siB0QA1PZM8v3GepegFV1Op189UxHUCF6y8AySdtOMVA==}
@@ -7099,13 +7076,6 @@ snapshots:
       eslint-visitor-keys: 2.1.0
       semver: 6.3.1
 
-  '@babel/generator@7.23.0':
-    dependencies:
-      '@babel/types': 7.23.0
-      '@jridgewell/gen-mapping': 0.3.5
-      '@jridgewell/trace-mapping': 0.3.25
-      jsesc: 2.5.2
-
   '@babel/generator@7.24.4':
     dependencies:
       '@babel/types': 7.24.0
@@ -7915,21 +7885,6 @@ snapshots:
       '@babel/parser': 7.24.4
       '@babel/types': 7.24.0
 
-  '@babel/traverse@7.23.0':
-    dependencies:
-      '@babel/code-frame': 7.24.2
-      '@babel/generator': 7.23.0
-      '@babel/helper-environment-visitor': 7.22.20
-      '@babel/helper-function-name': 7.23.0
-      '@babel/helper-hoist-variables': 7.22.5
-      '@babel/helper-split-export-declaration': 7.22.6
-      '@babel/parser': 7.24.4
-      '@babel/types': 7.23.0
-      debug: 4.3.4
-      globals: 11.12.0
-    transitivePeerDependencies:
-      - supports-color
-
   '@babel/traverse@7.24.1':
     dependencies:
       '@babel/code-frame': 7.24.2
@@ -7944,12 +7899,6 @@ snapshots:
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
-
-  '@babel/types@7.23.0':
-    dependencies:
-      '@babel/helper-string-parser': 7.24.1
-      '@babel/helper-validator-identifier': 7.22.20
-      to-fast-properties: 2.0.0
 
   '@babel/types@7.24.0':
     dependencies:
@@ -8450,10 +8399,6 @@ snapshots:
       slash: 3.0.0
       tslib: 2.6.2
       upath: 2.0.1
-
-  '@ljharb/through@2.3.12':
-    dependencies:
-      call-bind: 1.0.7
 
   '@ljharb/through@2.3.13':
     dependencies:
@@ -10560,10 +10505,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ember-cli-dependency-checker@3.3.2(ember-cli@5.7.0(handlebars@4.7.8)(lodash@4.17.21)(underscore@1.13.6)):
+  ember-cli-dependency-checker@3.3.2(ember-cli@5.8.1(handlebars@4.7.8)(underscore@1.13.6)):
     dependencies:
       chalk: 2.4.2
-      ember-cli: 5.7.0(handlebars@4.7.8)(lodash@4.17.21)(underscore@1.13.6)
+      ember-cli: 5.8.1(handlebars@4.7.8)(underscore@1.13.6)
       find-yarn-workspace-root: 1.2.1
       is-git-url: 1.0.0
       resolve: 1.22.8
@@ -10729,7 +10674,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ember-cli@5.7.0(handlebars@4.7.8)(lodash@4.17.21)(underscore@1.13.6):
+  ember-cli@5.8.1(handlebars@4.7.8)(underscore@1.13.6):
     dependencies:
       '@pnpm/find-workspace-dir': 6.0.2
       broccoli: 3.5.2
@@ -10753,6 +10698,7 @@ snapshots:
       compression: 1.7.4
       configstore: 5.0.1
       console-ui: 3.1.2
+      content-tag: 1.2.2
       core-object: 3.1.5
       dag-map: 2.0.2
       diff: 5.1.0
@@ -10761,7 +10707,6 @@ snapshots:
       ember-cli-normalize-entity-name: 1.0.0
       ember-cli-preprocess-registry: 5.0.1
       ember-cli-string-utils: 1.1.0
-      ember-template-tag: 2.3.15
       ensure-posix-path: 1.1.1
       execa: 5.1.1
       exit: 0.1.2
@@ -10781,11 +10726,11 @@ snapshots:
       heimdalljs-logger: 0.1.10
       http-proxy: 1.18.1
       inflection: 2.0.1
-      inquirer: 9.2.14
+      inquirer: 9.2.19
       is-git-url: 1.0.0
       is-language-code: 3.1.0
       isbinaryfile: 5.0.0
-      lodash.template: 4.5.0
+      lodash: 4.17.21
       markdown-it: 13.0.1
       markdown-it-terminal: 0.4.0(markdown-it@13.0.1)
       minimatch: 7.4.6
@@ -10842,7 +10787,6 @@ snapshots:
       - just
       - liquid-node
       - liquor
-      - lodash
       - marko
       - mote
       - nunjucks
@@ -11094,15 +11038,6 @@ snapshots:
       slash: 3.0.0
       tmp: 0.2.1
       workerpool: 6.5.1
-    transitivePeerDependencies:
-      - supports-color
-
-  ember-template-tag@2.3.15:
-    dependencies:
-      '@babel/generator': 7.23.0
-      '@babel/traverse': 7.23.0
-      '@babel/types': 7.23.0
-      '@glimmer/syntax': 0.84.3
     transitivePeerDependencies:
       - supports-color
 
@@ -12468,24 +12403,6 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       through: 2.3.8
-
-  inquirer@9.2.14:
-    dependencies:
-      '@ljharb/through': 2.3.12
-      ansi-escapes: 4.3.2
-      chalk: 5.3.0
-      cli-cursor: 3.1.0
-      cli-width: 4.1.0
-      external-editor: 3.1.0
-      figures: 3.2.0
-      lodash: 4.17.21
-      mute-stream: 1.0.0
-      ora: 5.4.1
-      run-async: 3.0.0
-      rxjs: 7.8.1
-      string-width: 4.2.3
-      strip-ansi: 6.0.1
-      wrap-ansi: 6.2.0
 
   inquirer@9.2.19:
     dependencies:
