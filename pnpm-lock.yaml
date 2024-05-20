@@ -30,8 +30,8 @@ importers:
         specifier: 3.1.1
         version: 3.1.1
       '@embroider/addon-shim':
-        specifier: 1.8.7
-        version: 1.8.7
+        specifier: 1.8.8
+        version: 1.8.8
       ember-metrics:
         specifier: 2.0.0-beta.2
         version: 2.0.0-beta.2
@@ -976,6 +976,10 @@ packages:
     resolution: {integrity: sha512-JGOQNRj3UR0NdWEg8MsM2eqPLncEwSB1IX+rwntIj22TEKj8biqx7GDgSbeH+ZedijmCh354Hf2c5rthrdzUAw==}
     engines: {node: 12.* || 14.* || >= 16}
 
+  '@embroider/addon-shim@1.8.8':
+    resolution: {integrity: sha512-+SkD/JJqnmCBJpsjPu419iNA9kQdqojNBrldE7f5H80A4FWUGRO9s622+SwdzKiXCaMWcNeww7Ah7CL/YZPoHg==}
+    engines: {node: 12.* || 14.* || >= 16}
+
   '@embroider/core@3.4.7':
     resolution: {integrity: sha512-JTXpPBzsIrTdQdv/UdUQVinCxCtcLjHb0CgCksifFyut/JZC+6Dh65eP8KuPuF9eUX0ptxEhr7DQiMNeAD/p7w==}
     engines: {node: 12.* || 14.* || >= 16}
@@ -997,10 +1001,6 @@ packages:
     peerDependenciesMeta:
       '@glint/template':
         optional: true
-
-  '@embroider/shared-internals@2.5.1':
-    resolution: {integrity: sha512-b+TWDBisH1p6HeTbJIO8pgu1WzfTP0ZSAlZBqjXwOyrS0ZxP1qNYRrEX+IxyzIibEFjXBxeLakiejz3DJvZX5A==}
-    engines: {node: 12.* || 14.* || >= 16}
 
   '@embroider/shared-internals@2.5.2':
     resolution: {integrity: sha512-jNDJ9YlV6Qp9Na9v17qirUewVuq6T0t32nn+bbnFlCRTvmllKluZdYPSC5RuRnEZKTloVYRSF0+f1rgkTIEvxQ==}
@@ -1814,6 +1814,7 @@ packages:
   are-we-there-yet@3.0.1:
     resolution: {integrity: sha512-QZW4EDmGwlYur0Yyf/b2uGucHQMa8aFUP7eu9ddR73vvhFyt4V0Vl3QHPcTNJ8l6qYOBdxgXdnBXQrHilfRQBg==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
+    deprecated: This package is no longer supported.
 
   argparse@1.0.10:
     resolution: {integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==}
@@ -1917,10 +1918,6 @@ packages:
 
   babel-import-util@0.2.0:
     resolution: {integrity: sha512-CtWYYHU/MgK88rxMrLfkD356dApswtR/kWZ/c6JifG1m10e7tBBrs/366dFzWMAoqYmG5/JSh+94tUSpIwh+ag==}
-    engines: {node: '>= 12.*'}
-
-  babel-import-util@2.0.0:
-    resolution: {integrity: sha512-pkWynbLwru0RZmA9iKeQL63+CkkW0RCP3kL5njCtudd6YPUKb5Pa0kL4fb3bmuKn2QDBFwY5mvvhEK/+jv2Ynw==}
     engines: {node: '>= 12.*'}
 
   babel-import-util@2.0.1:
@@ -2465,6 +2462,9 @@ packages:
   commander@8.3.0:
     resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
     engines: {node: '>= 12'}
+
+  common-ancestor-path@1.0.1:
+    resolution: {integrity: sha512-L3sHRo1pXXEqX8VU28kfgUY+YGsk09hPqZiZmLacNib6XNTCM8ubYeT7ryXQw8asB1sKgcU5lkB7ONug08aB8w==}
 
   commondir@1.0.1:
     resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}
@@ -3773,6 +3773,7 @@ packages:
   gauge@4.0.4:
     resolution: {integrity: sha512-f9m+BEN5jkg6a0fZjleidjN51VE1X+mPFQ2DJ0uv1V39oCLCbsGe6yjbBnp7eK7z/+GAon99a3nHuqbuuthyPg==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
+    deprecated: This package is no longer supported.
 
   gensync@1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
@@ -5212,6 +5213,7 @@ packages:
   npmlog@6.0.2:
     resolution: {integrity: sha512-/vBvz5Jfr9dT/aFWd0FIRf+T/Q2WBsLENygUaFUqstqsycmZAP/t5BvFJTK0viFmSUxiUKTUplWy5vt+rvKIxg==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
+    deprecated: This package is no longer supported.
 
   nwsapi@2.2.2:
     resolution: {integrity: sha512-90yv+6538zuvUMnN+zCr8LuV6bPFdq50304114vJYJ8RDyK8D5O9Phpbd6SZWgI7PwzmmfN1upeOJlvybDSgCw==}
@@ -7984,9 +7986,18 @@ snapshots:
 
   '@embroider/addon-shim@1.8.7':
     dependencies:
-      '@embroider/shared-internals': 2.5.1
+      '@embroider/shared-internals': 2.6.0
       broccoli-funnel: 3.0.8
-      semver: 7.5.4
+      semver: 7.6.0
+    transitivePeerDependencies:
+      - supports-color
+
+  '@embroider/addon-shim@1.8.8':
+    dependencies:
+      '@embroider/shared-internals': 2.6.0
+      broccoli-funnel: 3.0.8
+      common-ancestor-path: 1.0.1
+      semver: 7.6.0
     transitivePeerDependencies:
       - supports-color
 
@@ -8047,20 +8058,6 @@ snapshots:
       lodash: 4.17.21
       resolve: 1.22.8
       semver: 7.6.0
-    transitivePeerDependencies:
-      - supports-color
-
-  '@embroider/shared-internals@2.5.1':
-    dependencies:
-      babel-import-util: 2.0.0
-      debug: 4.3.4
-      ember-rfc176-data: 0.3.18
-      fs-extra: 9.1.0
-      js-string-escape: 1.0.1
-      lodash: 4.17.21
-      resolve-package-path: 4.0.3
-      semver: 7.5.4
-      typescript-memoize: 1.1.1
     transitivePeerDependencies:
       - supports-color
 
@@ -9146,8 +9143,6 @@ snapshots:
 
   babel-import-util@0.2.0: {}
 
-  babel-import-util@2.0.0: {}
-
   babel-import-util@2.0.1: {}
 
   babel-loader@8.3.0(@babel/core@7.24.5)(webpack@5.91.0):
@@ -10028,6 +10023,8 @@ snapshots:
 
   commander@8.3.0: {}
 
+  common-ancestor-path@1.0.1: {}
+
   commondir@1.0.1: {}
 
   component-emitter@1.3.1: {}
@@ -10892,7 +10889,7 @@ snapshots:
 
   ember-page-title@8.2.3(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(rsvp@4.8.5)(webpack@5.91.0)):
     dependencies:
-      '@embroider/addon-shim': 1.8.7
+      '@embroider/addon-shim': 1.8.8
       '@simple-dom/document': 1.4.0
       ember-source: 5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(rsvp@4.8.5)(webpack@5.91.0)
     transitivePeerDependencies:
@@ -10901,7 +10898,7 @@ snapshots:
   ember-qunit@8.0.2(@ember/test-helpers@3.3.0(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(rsvp@4.8.5)(webpack@5.91.0))(webpack@5.91.0))(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(rsvp@4.8.5)(webpack@5.91.0))(qunit@2.20.1):
     dependencies:
       '@ember/test-helpers': 3.3.0(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(rsvp@4.8.5)(webpack@5.91.0))(webpack@5.91.0)
-      '@embroider/addon-shim': 1.8.7
+      '@embroider/addon-shim': 1.8.8
       '@embroider/macros': 1.13.5
       ember-cli-test-loader: 3.1.0
       ember-source: 5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(rsvp@4.8.5)(webpack@5.91.0)
@@ -11049,7 +11046,7 @@ snapshots:
       lodash: 4.17.21
       package-json: 6.5.0
       remote-git-tags: 3.0.0
-      semver: 7.5.4
+      semver: 7.6.0
     transitivePeerDependencies:
       - encoding
 
@@ -15313,7 +15310,7 @@ snapshots:
   validate-peer-dependencies@1.2.0:
     dependencies:
       resolve-package-path: 3.1.0
-      semver: 7.5.4
+      semver: 7.6.0
 
   validate-peer-dependencies@2.2.0:
     dependencies:
