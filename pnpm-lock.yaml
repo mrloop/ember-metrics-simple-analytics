@@ -10,10 +10,10 @@ importers:
     devDependencies:
       '@release-it-plugins/lerna-changelog':
         specifier: 7.0.0
-        version: 7.0.0(release-it@17.4.1(typescript@5.4.5))
+        version: 7.0.0(release-it@17.5.0(typescript@5.4.5))
       '@release-it-plugins/workspaces':
         specifier: 4.2.0
-        version: 4.2.0(release-it@17.4.1(typescript@5.4.5))
+        version: 4.2.0(release-it@17.5.0(typescript@5.4.5))
       concurrently:
         specifier: ^8.0.0
         version: 8.2.2
@@ -21,8 +21,8 @@ importers:
         specifier: ^3.0.0
         version: 3.3.2
       release-it:
-        specifier: 17.4.1
-        version: 17.4.1(typescript@5.4.5)
+        specifier: 17.5.0
+        version: 17.5.0(typescript@5.4.5)
 
   ember-metrics-simple-analytics:
     dependencies:
@@ -6292,8 +6292,8 @@ packages:
     resolution: {integrity: sha512-dQUtn90WanSNl+7mQKcXAgZxvUe7Z0SqXlgzv0za4LwiUhyzBC58yQO3liFoUgu8GiJVInAhJjkj1N0EtQ5nkQ==}
     hasBin: true
 
-  release-it@17.4.1:
-    resolution: {integrity: sha512-Aa48kKx5qZRVXJ6YCnCJRg6sJiofEX7RErTLmnlFbCE7k1Kg8ayhgJovofuBhCtz3FRdsYnxBKjlh+VAMeazEA==}
+  release-it@17.5.0:
+    resolution: {integrity: sha512-+g6k/7i6AjdCozLkcybvwgYLw/RF6bcYJHf1xDLcg36GeBu8zr/geI9joLk5drubiE/UKdN694vwAeimmJWt8Q==}
     engines: {node: ^18.18.0 || ^20.9.0 || ^22.0.0}
     hasBin: true
 
@@ -9681,13 +9681,13 @@ snapshots:
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
 
-  '@release-it-plugins/lerna-changelog@7.0.0(release-it@17.4.1(typescript@5.4.5))':
+  '@release-it-plugins/lerna-changelog@7.0.0(release-it@17.5.0(typescript@5.4.5))':
     dependencies:
       execa: 5.1.1
       lerna-changelog: 2.2.0
       lodash: 4.17.21
       mdast-util-from-markdown: 1.2.0
-      release-it: 17.4.1(typescript@5.4.5)
+      release-it: 17.5.0(typescript@5.4.5)
       tmp: 0.2.1
       validate-peer-dependencies: 2.2.0
       which: 2.0.2
@@ -9695,11 +9695,11 @@ snapshots:
       - bluebird
       - supports-color
 
-  '@release-it-plugins/workspaces@4.2.0(release-it@17.4.1(typescript@5.4.5))':
+  '@release-it-plugins/workspaces@4.2.0(release-it@17.5.0(typescript@5.4.5))':
     dependencies:
       detect-indent: 6.1.0
       detect-newline: 3.1.0
-      release-it: 17.4.1(typescript@5.4.5)
+      release-it: 17.5.0(typescript@5.4.5)
       semver: 7.5.4
       url-join: 4.0.1
       validate-peer-dependencies: 1.2.0
@@ -15386,7 +15386,7 @@ snapshots:
     dependencies:
       jsesc: 0.5.0
 
-  release-it@17.4.1(typescript@5.4.5):
+  release-it@17.5.0(typescript@5.4.5):
     dependencies:
       '@iarna/toml': 2.2.5
       '@octokit/rest': 20.1.1
