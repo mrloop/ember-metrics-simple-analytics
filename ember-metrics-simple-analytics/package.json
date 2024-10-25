@@ -42,7 +42,7 @@
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/plugin-proposal-decorators": "^7.17.0",
     "@babel/plugin-syntax-decorators": "^7.17.0",
-    "@embroider/addon-dev": "5.0.0",
+    "@embroider/addon-dev": "6.0.1",
     "@rollup/plugin-babel": "^6.0.0",
     "concurrently": "^9.0.0",
     "ember-template-lint": "^6.0.0",
