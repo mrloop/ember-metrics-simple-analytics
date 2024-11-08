@@ -116,7 +116,7 @@ importers:
         version: 9.0.1
       ember-auto-import:
         specifier: ^2.5.0
-        version: 2.9.0(webpack@5.96.1)
+        version: 2.10.0(webpack@5.96.1)
       ember-cli:
         specifier: ~5.12.0
         version: 5.12.0(handlebars@4.7.8)(underscore@1.13.6)
@@ -3385,8 +3385,8 @@ packages:
   electron-to-chromium@1.5.50:
     resolution: {integrity: sha512-eMVObiUQ2LdgeO1F/ySTXsvqvxb6ZH2zPGaMYsWzRDdOddUa77tdmI0ltg+L16UpbWdhPmuF3wIQYyQq65WfZw==}
 
-  ember-auto-import@2.9.0:
-    resolution: {integrity: sha512-iXPq2rJcJaqD+m5Lk1rYAVl7Db2MvT1MMjKJfJbNT3ps4xI2H+3njwwfT6pOKZIUVB/rfeyNPANqbnw3F68Qxg==}
+  ember-auto-import@2.10.0:
+    resolution: {integrity: sha512-bcBFDYVTFHyqyq8BNvsj6UO3pE6Uqou/cNmee0WaqBgZ+1nQqFz0UE26usrtnFAT+YaFZSkqF2H36QW84k0/cg==}
     engines: {node: 12.* || 14.* || >= 16}
 
   ember-cli-app-version@7.0.0:
@@ -11323,7 +11323,7 @@ snapshots:
 
   electron-to-chromium@1.5.50: {}
 
-  ember-auto-import@2.9.0(webpack@5.96.1):
+  ember-auto-import@2.10.0(webpack@5.96.1):
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.26.0)
@@ -11904,7 +11904,7 @@ snapshots:
       broccoli-funnel: 3.0.8
       broccoli-merge-trees: 4.2.0
       chalk: 4.1.2
-      ember-auto-import: 2.9.0(webpack@5.96.1)
+      ember-auto-import: 2.10.0(webpack@5.96.1)
       ember-cli-babel: 7.26.11
       ember-cli-get-component-path-option: 1.0.0
       ember-cli-is-package-missing: 1.0.0
@@ -11986,7 +11986,7 @@ snapshots:
       lodash: 4.17.21
       package-json: 6.5.0
       remote-git-tags: 3.0.0
-      semver: 7.6.3
+      semver: 7.5.4
     transitivePeerDependencies:
       - encoding
 
@@ -16247,7 +16247,7 @@ snapshots:
   validate-peer-dependencies@1.2.0:
     dependencies:
       resolve-package-path: 3.1.0
-      semver: 7.6.3
+      semver: 7.5.4
 
   validate-peer-dependencies@2.2.0:
     dependencies:
