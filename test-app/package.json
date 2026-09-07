@@ -43,7 +43,7 @@
     "ember-cli-terser": "^4.0.2",
     "ember-disable-prototype-extensions": "^1.1.3",
     "ember-fetch": "^8.1.2",
-    "ember-load-initializers": "^2.1.2",
+    "ember-load-initializers": "^3.0.0",
     "ember-metrics": "2.0.0-beta.2",
     "ember-metrics-simple-analytics": "^1.0.0",
     "ember-page-title": "^8.0.0",
